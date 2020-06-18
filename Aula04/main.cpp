@@ -10,6 +10,7 @@ void show_usage(const std::string &prog_name) {
 }
 
 int add(int argc, char* argv[]) {
+
     std::string message;
 
     if (argc == 2) {
@@ -32,9 +33,11 @@ int add(int argc, char* argv[]) {
     std::cout << "Mensagem Adicionada" << std::endl;
 
     return 0;
+
 }
 
 int list() {
+
     std::ifstream file("bd.txt");
 
     if (!file.is_open()) {
@@ -58,9 +61,11 @@ int list() {
     file.close();
 
     return 0;
+
 }
 
 int action(int argc, char* argv[]) {
+
     std::string action = argv[1];
 
     if (action == "add") {
@@ -84,4 +89,7 @@ int main(int argc, char* argv[]) {
     }
 
     return action(argc, argv);
+
 }
+
+// By Alex Sandro de Paiva
