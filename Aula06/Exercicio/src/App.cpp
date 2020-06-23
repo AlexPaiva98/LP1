@@ -1,7 +1,8 @@
-#include "App.h"
-
 #include <iostream>
 #include <string>
+
+#include "../include/App.h"
+#include "../include/Message.h"
 
 App::App(const std::string &filename): diary(filename) {
 
@@ -35,11 +36,10 @@ void App::add() {
     std::string message;
     std::cout << "Enter your message:" << std::endl;
     std::getline(std::cin, message);
-
     add(message);
 }
 
-void App::add(const std::string message) {
+void App::add(const std::string &message) {
     diary.add(message);
     diary.write();
 }

@@ -1,11 +1,12 @@
 #ifndef APP_H
 #define APP_H
 
-#include "Diary.h"
-
 #include <string>
 
+#include "Diary.h"
+
 struct App {
+
     Diary diary;
     
     // Construtor
