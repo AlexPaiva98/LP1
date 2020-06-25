@@ -1,5 +1,4 @@
 #include <string>
-#include <ctime>
 
 // Funções auxiliares
 std::string format_current_date(const std::string& format);

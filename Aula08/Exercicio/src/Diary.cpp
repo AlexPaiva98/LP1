@@ -1,4 +1,7 @@
+#include <iostream>
+
 #include "../include/Diary.h"
+#include "../include/Aux.h"
 
 Diary::Diary(const std::string& filename): 
     filename(filename), 

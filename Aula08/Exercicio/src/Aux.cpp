@@ -1,3 +1,5 @@
+#include <ctime>
+
 #include "../include/Aux.h"
 
 std::string format_current_date(const std::string& format) {

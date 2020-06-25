@@ -1,4 +1,7 @@
+#include <iostream>
+
 #include "../include/App.h"
+#include "../include/Message.h"
 
 App::App(const std::string &filename): diary(filename) {
 

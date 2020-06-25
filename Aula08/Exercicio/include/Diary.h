@@ -1,11 +1,9 @@
 #ifndef DIARY_H
 #define DIARY_H
 
-#include <iostream>
 #include <string>
 
 #include "Message.h"
-#include "Aux.h"
 
 struct Diary {
 
