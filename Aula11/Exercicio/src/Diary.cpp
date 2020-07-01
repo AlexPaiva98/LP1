@@ -109,7 +109,7 @@ void Diary::write() {
 std::vector<Message*> Diary::search(std::string what) {
 
     std::vector<Message*> filtered_messages;
-    for (auto i: messages) {
+    for (auto& i: messages) {
         size_t found = i.content.find(what);
         if (found != std::string::npos) {
             filtered_messages.push_back(&i);
