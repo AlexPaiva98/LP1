@@ -1,8 +1,8 @@
-# Compilar
+## Compilar
 
 make
 
-# Executar
+## Executar
 
 ./conta
 
