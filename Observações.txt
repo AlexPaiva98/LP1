@@ -1,0 +1,36 @@
+O que são o std::cin e std::cout?
+
+São streans.
+
+cin: "este objeto fornece entrada de dados "bufferizada" através do "standard input device", o dispositivo de entrada padrão" (WIKI);
+cout: "este objeto fornece saída de dados "bufferizada" através do "standard output device", o dispositivo de saída padrão" (WIKI);
+
+Ambos utilizam operadores, inserção no caso do cout (envia dados) e extração na situação do cin. Observação: eles trabalham com referências (ponteiros);
+
+
+Qual a função do return 0 do método main?
+
+Normalmente as linguagens de programação necessitam de um ponto de partida, no caso do C++ seria o main. Além disso, é preciso saber se a execução ocorreu bem, por isso têm-se a estrutura de retorno.
+
+
+O que são o int argc, e o char* argv[]?
+
+Trata-se de uma estrutura que permite a passagem de argumentos através da linha de comando para um programa quando ele inicia.
+
+argc: valor inteiro que indica a quantidade de argumentos que foram passados;
+char* argv[]: array de ponteiros de char que contém os argumentos;
+Regra do zigzag (começa pelo nome, vai para direita e se não tiver mais nada vai para esquerda);
+
+streans: camada que simplificando um processo de entendimento, mascara a complexidade existente
+
+bitshift: desloca a posição de um bit
+- Em binário:
+    0001 << 1 = 0010
+    0100 >> 1 = 0010
+
+Um exemplo prático de bitshif?
+- O que ocorre com void main?
+Retorna 0;
+
+pandoc -f markdown -t html5 message.html messagem.md
+
