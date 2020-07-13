@@ -26,7 +26,7 @@ class Empresa {
         std::string getNome();
         void setNome(std::string nome);
 
-        void adicionarFuncionarios(unsigned int quantidade);
+        void adicionarFuncionario(Funcionario funcionario);
         void aumentarSalario(std::string departamento);
 
         void listarFuncionarios();
