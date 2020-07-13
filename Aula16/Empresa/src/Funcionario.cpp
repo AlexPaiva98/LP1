@@ -28,6 +28,14 @@ void Funcionario::setSalario(double salario) {
     }
 }
 
+std::string Funcionario::getEmpresa() {
+    return this->empresa;
+}
+
+void Funcionario::setEmpresa(std::string empresa) {
+    this->empresa = empresa;
+}
+
 std::string Funcionario::getDataAdmissao() {
     return this->data_admissao;
 }

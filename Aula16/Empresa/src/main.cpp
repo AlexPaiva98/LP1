@@ -1,10 +1,38 @@
 #include <iostream>
+#include <list>
 
 #include "../include/Empresa.hpp"
 
-int main(int argc, char const *argv[]) {
 
-    Empresa empresa("31.557.929/0001-40", "Crefisa");
+void listarFuncionarios(std::list<Funcionario> &funcionarios) {
+    for (auto &funcionario: funcionarios) {
+
+        std::cout << std::endl;
+
+        std::cout << "Nome: " << funcionario.getNome() << std::endl;
+        std::cout << "Salário: " << funcionario.getSalario() << std::endl;
+        std::cout << "Empresa: " << funcionario.getEmpresa() << std::endl;
+        std::cout << "Data de Admissão: " << funcionario.getDataAdmissao() << std::endl;
+        std::cout << "Departamento: " << funcionario.getDepartamento() << std::endl;
+    
+    }
+}
+
+void aumentarSalario(std::list<Funcionario> &funcionarios) {
+    
+    std::cout << "Desejas aumentar em 10% os salários dos funcionários condizentes a qual departamento? ";
+    std::string departamento;
+    std::cin >> departamento;
+    std::cin.ignore();
+
+    for (auto &funcionario: funcionarios) {
+        if (funcionario.getDepartamento() == departamento) {
+            funcionario.setSalario(funcionario.getSalario() * 1.1);
+        }
+    }
+}
+
+void inserirFuncionarios(std::list<Funcionario> &funcionarios) {
 
     std::cout << "Desejas adicionar quantos funcionários? ";
     size_t quantidade;
@@ -46,14 +74,23 @@ int main(int argc, char const *argv[]) {
         std::cin.ignore();
         funcionario.setDepartamento(departamento);
 
-        empresa.adicionarFuncionario(funcionario);
+        funcionarios.push_back(funcionario);
 
     }
+}
+
+int main(int argc, char const *argv[]) {
+
+    Empresa empresa("31.557.929/0001-40", "Crefisa");
     
-    empresa.aumentarSalario("TI");
+    std::list<Funcionario> funcionarios;
 
-    empresa.listarFuncionarios();
+    inserirFuncionarios(funcionarios);
 
+    aumentarSalario(funcionarios);
+    
+    listarFuncionarios(funcionarios);
+    
     return 0;
 
 }

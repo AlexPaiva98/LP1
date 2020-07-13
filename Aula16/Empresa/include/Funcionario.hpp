@@ -9,6 +9,7 @@ class Funcionario {
 
         std::string nome;
         double salario;
+        std::string empresa;
         std::string data_admissao;
         std::string departamento;
 
@@ -22,6 +23,9 @@ class Funcionario {
 
         double getSalario();
         void setSalario(double salario);
+
+        std::string getEmpresa();
+        void setEmpresa(std::string empresa);
 
         std::string getDataAdmissao();
         void setDataAdmissao(std::string data_admissao);
