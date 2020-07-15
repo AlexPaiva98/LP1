@@ -11,14 +11,14 @@ class Fila{
         Fila(int size){
             this->size = size;
             this->top = -1;
-            this->elements = new CLIENTE[size];
+            this->elements = new CLIENTE[this->size];
         }
 
         void push(CLIENTE element){
             if(this->top == (this->size - 1)){
                 std::cout << "Fila cheia" << std::endl;
             }else{
-                this->elements[++this->top] = element;
+                this->elements[++top] = element;
             }
         }
 
@@ -26,7 +26,15 @@ class Fila{
             if(this->top == -1){
                 std::cout << "Fila vazia" << std::endl;
             }else{
-                this->elements[this->top++];
+                CLIENTE* update_elements = new CLIENTE[this->size];
+                for (int i = 0; i < this->size; i++) {
+                    if (i == 0) {
+                        continue;
+                    }
+                    update_elements[i - 1] = this->elements[i];
+                }
+                delete[] this->elements;
+                this->elements = update_elements;
             }
         }
 

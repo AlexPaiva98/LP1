@@ -24,6 +24,8 @@ int main(int argc, char const *argv[]){
     std::cout << "Primeira: " << filaPJ.front().getRazaoSocial() << std::endl;
     std::cout << "Última: " << filaPJ.back().getRazaoSocial() << std::endl << std::endl;
 
+    std::cout << "Primeira: " << filaPJ.front().getRazaoSocial() << std::endl;
+
     Cliente cliente_pedro("Pedro da Silva", "123.456.789-12");
     Cliente cliente_thiago("Thiago Ferreira", "987.654.321-98");
 
