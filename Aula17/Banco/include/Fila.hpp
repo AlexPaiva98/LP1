@@ -18,7 +18,7 @@ class Fila{
             if(this->top == (this->size - 1)){
                 std::cout << "Fila cheia" << std::endl;
             }else{
-                this->elements[++top] = element;
+                this->elements[++this->top] = element;
             }
         }
 
@@ -26,8 +26,16 @@ class Fila{
             if(this->top == -1){
                 std::cout << "Fila vazia" << std::endl;
             }else{
-                this->elements[this->top--];
+                this->elements[this->top++];
             }
+        }
+
+        CLIENTE front(){
+            return this->elements[0];
+        }
+
+        CLIENTE back(){
+            return this->elements[this->top];
         }
 
         bool isEmpty(){
@@ -36,10 +44,6 @@ class Fila{
             }else{
                 return false;
             }
-        }
-
-        CLIENTE back(){
-            return this->elements[this->top];
         }
 
 };
